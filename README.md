@@ -340,6 +340,19 @@ NodeMCU/Wemos  ESP8266      ENC28J60
                Q3/V33 <---> 3.3V
                GND    <---> GND
 ```
+```
+ESP8266-ESP12       ENC28J60
+
+    3v3      <---->    VCC
+    GND      <---->    GND
+    GPIO15   <---->    CS
+    GPIO5    <---->    RST (Reset)
+    GPIO13   <---->    SI
+    GPIO14   <---->    SCK
+    GPIO12   <---->    SO
+    GPIO4    <---->    INT
+```
+
 In addition you will need a transistor for decoupling GPIO15, otherwise your ESP will not boot any more, see: https://esp8266hints.wordpress.com/category/ethernet/
 
 Now you can configure the new Ethernet interface: 
